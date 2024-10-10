@@ -928,11 +928,10 @@ export class SignedXml {
 
       for (const node of nodes) {
         if (ref.isEmptyUri) {
-          res += `<${prefix}Reference URI="">`;
+          res += `<${prefix}Reference URI="foo">`;
         } else {
           // const id = this.ensureHasId(node);
-          // ref.uri = id;
-          // res += `<${prefix}Reference URI="#${id}">`;
+          res += `<${prefix}Reference URI="#">`;
         }
         res += `<${prefix}Transforms>`;
         for (const trans of ref.transforms || []) {
