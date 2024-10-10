@@ -930,9 +930,9 @@ export class SignedXml {
         if (ref.isEmptyUri) {
           res += `<${prefix}Reference URI="">`;
         } else {
-          const id = this.ensureHasId(node);
-          ref.uri = id;
-          res += `<${prefix}Reference URI="#${id}">`;
+          // const id = this.ensureHasId(node);
+          // ref.uri = id;
+          // res += `<${prefix}Reference URI="#${id}">`;
         }
         res += `<${prefix}Transforms>`;
         for (const trans of ref.transforms || []) {
